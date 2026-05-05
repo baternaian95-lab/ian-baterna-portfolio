@@ -198,6 +198,7 @@ export default function Portfolio() {
                       {job.period}
                     </span>
                   </div>
+                  <div className="h-px w-full bg-border" />
                   <ul className="space-y-3">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed">
