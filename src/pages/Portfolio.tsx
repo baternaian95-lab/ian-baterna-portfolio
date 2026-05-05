@@ -199,9 +199,9 @@ export default function Portfolio() {
                     </span>
                   </div>
                   <div className="h-px w-full bg-border" />
-                  <ul className="space-y-3">
+                  <ul className="divide-y divide-border">
                     {job.bullets.map((b, j) => (
-                      <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed">
+                      <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed py-3 first:pt-0 last:pb-0">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                         <span>{b}</span>
                       </li>
