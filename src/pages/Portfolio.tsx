@@ -175,7 +175,7 @@ export default function Portfolio() {
               <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">Where I've worked</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
-              Five plus years across web development, SEO, and system integration — building and maintaining sites and tools that teams actually rely on.
+              Five plus years building and maintaining sites and tools across web development, SEO, and integrations.
             </p>
           </div>
 
@@ -198,6 +198,7 @@ export default function Portfolio() {
                       {job.period}
                     </span>
                   </div>
+                  <div className="h-px w-full bg-border" />
                   <ul className="space-y-3">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed">
