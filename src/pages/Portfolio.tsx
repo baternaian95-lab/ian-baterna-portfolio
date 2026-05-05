@@ -169,11 +169,14 @@ export default function Portfolio() {
       {/* Experience */}
       <section id="experience" className="py-20 border-t border-border">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
             <div>
               <div className="text-sm uppercase tracking-widest text-primary font-semibold">Employment</div>
               <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">Where I've worked</h2>
             </div>
+            <p className="text-muted-foreground max-w-md">
+              Five plus years across web development, SEO, and system integration — building and maintaining sites and tools that teams actually rely on.
+            </p>
           </div>
 
           <div className="space-y-6">
