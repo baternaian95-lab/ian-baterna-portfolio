@@ -179,7 +179,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="bg-card border border-border rounded-3xl divide-y divide-border overflow-hidden">
             {employment.map((job, i) => (
               <motion.div
                 key={i}
@@ -187,19 +187,19 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card border border-border rounded-3xl p-8 md:p-10 hover:shadow-lg transition"
+                className="p-8 md:p-10 hover:bg-muted/30 transition"
               >
-                <div className="flex flex-col gap-5">
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <h3 className="font-display text-2xl font-bold">
-                      {job.role} <span className="text-primary">· {job.company}</span>
-                    </h3>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide">
+                <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10">
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">
                       {job.period}
                     </span>
+                    <h3 className="font-display text-xl font-bold leading-tight">
+                      {job.company}
+                    </h3>
+                    <span className="text-sm text-muted-foreground">{job.role}</span>
                   </div>
-                  <div className="h-px w-full bg-border" />
-                  <ul className="divide-y divide-border">
+                  <ul className="divide-y divide-border/60">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed py-3 first:pt-0 last:pb-0">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
@@ -238,23 +238,23 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group bg-card border border-border rounded-3xl p-8 hover:shadow-xl hover:border-primary/40 transition flex flex-col"
+                className="group bg-card border border-border rounded-3xl hover:shadow-xl hover:border-primary/40 transition flex flex-col divide-y divide-border overflow-hidden"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start justify-between gap-4 p-7">
                   <h3 className="font-display text-2xl font-bold group-hover:text-primary transition">
                     {p.title}
                   </h3>
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition flex-shrink-0 mt-1" />
                 </div>
-                <p className="mt-3 text-muted-foreground leading-relaxed">{p.description}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <p className="text-muted-foreground leading-relaxed px-7 py-5">{p.description}</p>
+                <div className="flex flex-wrap gap-2 px-7 py-5">
                   {p.tags.map((t) => (
                     <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium text-muted-foreground">
                       {t}
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 text-xs text-muted-foreground truncate">
+                <div className="text-xs text-muted-foreground truncate px-7 py-4 bg-muted/30">
                   {p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
                 </div>
               </motion.a>
