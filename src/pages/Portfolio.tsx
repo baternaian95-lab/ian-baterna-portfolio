@@ -179,7 +179,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="bg-card border border-border rounded-3xl divide-y divide-border overflow-hidden">
             {employment.map((job, i) => (
               <motion.div
                 key={i}
@@ -187,19 +187,19 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card border border-border rounded-3xl p-8 md:p-10 hover:shadow-lg transition"
+                className="p-8 md:p-10 hover:bg-muted/30 transition"
               >
-                <div className="flex flex-col gap-5">
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <h3 className="font-display text-2xl font-bold">
-                      {job.role} <span className="text-primary">· {job.company}</span>
-                    </h3>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide">
+                <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10">
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">
                       {job.period}
                     </span>
+                    <h3 className="font-display text-xl font-bold leading-tight">
+                      {job.company}
+                    </h3>
+                    <span className="text-sm text-muted-foreground">{job.role}</span>
                   </div>
-                  <div className="h-px w-full bg-border" />
-                  <ul className="divide-y divide-border">
+                  <ul className="divide-y divide-border/60">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed py-3 first:pt-0 last:pb-0">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
