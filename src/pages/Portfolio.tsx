@@ -179,7 +179,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="bg-card border border-border rounded-3xl divide-y divide-border overflow-hidden">
+          <div className="space-y-6">
             {employment.map((job, i) => (
               <motion.div
                 key={i}
@@ -187,7 +187,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-8 md:p-10 hover:bg-muted/30 transition"
+                className="bg-card border border-border rounded-3xl p-8 md:p-10 hover:shadow-lg hover:border-primary/40 transition"
               >
                 <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10">
                   <div className="flex flex-col gap-2">
