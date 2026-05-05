@@ -238,23 +238,23 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group bg-card border border-border rounded-3xl p-8 hover:shadow-xl hover:border-primary/40 transition flex flex-col"
+                className="group bg-card border border-border rounded-3xl hover:shadow-xl hover:border-primary/40 transition flex flex-col divide-y divide-border overflow-hidden"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start justify-between gap-4 p-7">
                   <h3 className="font-display text-2xl font-bold group-hover:text-primary transition">
                     {p.title}
                   </h3>
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition flex-shrink-0 mt-1" />
                 </div>
-                <p className="mt-3 text-muted-foreground leading-relaxed">{p.description}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <p className="text-muted-foreground leading-relaxed px-7 py-5">{p.description}</p>
+                <div className="flex flex-wrap gap-2 px-7 py-5">
                   {p.tags.map((t) => (
                     <span key={t} className="px-3 py-1 rounded-full bg-muted text-xs font-medium text-muted-foreground">
                       {t}
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 text-xs text-muted-foreground truncate">
+                <div className="text-xs text-muted-foreground truncate px-7 py-4 bg-muted/30">
                   {p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
                 </div>
               </motion.a>
